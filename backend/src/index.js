@@ -1,6 +1,7 @@
 
-
+require('dotenv').config();
 const app = require('./app');
+require('./db');
 
 // Levantando el servidor
 
