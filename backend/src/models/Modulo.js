@@ -3,6 +3,7 @@
 const { Schema, model } = require('mongoose');
 
 const moduloSchema = new Schema({
+    _id: ObjectId,
     id: Number,
     nombre: String,
     preguntas: [
@@ -14,3 +15,4 @@ const moduloSchema = new Schema({
 });
 
 module.export = model("Modulo", moduloSchema);
+
