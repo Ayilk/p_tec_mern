@@ -8,7 +8,7 @@ const Nav = () => {
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container">
           <Link className="navbar-brand" to={"/"}>
-            Módulos
+            Inicio
           </Link>
           <button
             className="navbar-toggler"
@@ -25,13 +25,18 @@ const Nav = () => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto">
               <li className="nav-item">
-                <Link className="nav-link" to={"/"}>
+                <Link className="nav-link" to={"/listaModulos"}>
                   LISTA MODULOS
                 </Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to={"/crearModulo"}>
                   CREAR MODULOS
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to={"/crearPregunta"}>
+                  CREAR PREGUNTA
                 </Link>
               </li>
             </ul>

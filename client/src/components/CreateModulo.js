@@ -11,11 +11,10 @@ const CreateModulo = () => {
 
     //Recibimos el parametro para capturar en el id el parametro que mandamos por la url
     let {id}= useParams();
-    console.log(id)
 
     //Aquí creamos la variable de estado Módulo
     const [ modulo, setModulo ] = useState(valorInicial);
-    const [ subId, setSubId ] = useState(id);
+    const [ subId, setSubId ] = useState(id || '');
 
     const capturaData = (e) => {
         const { name, value } = e.target;
@@ -66,7 +65,6 @@ const CreateModulo = () => {
     //Lo va a montar cada que la variable de estado cambie
     useEffect(()=>{
         if(subId !== ''){
-            console.log(subId)
             getOne(subId)
         }
     },[subId])

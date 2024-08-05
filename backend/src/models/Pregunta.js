@@ -4,6 +4,7 @@
 const { Schema, model, mongoose } = require('mongoose');
 
 const preguntaSchema = new Schema({
+    modulo: Number,
     numero: Number,
     pregunta: String,
     respuesta: String,

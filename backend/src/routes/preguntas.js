@@ -1,6 +1,6 @@
 
 const { Router } = require('express');
-const { getPreguntas, createPregunta, getPreguntaById, updatePregunta, deletePregunta } = require('../controllers/pregunta.controller');
+const { getPreguntas, createPregunta, getPreguntaById, updatePregunta, deletePregunta, getPreguntaByModulo } = require('../controllers/pregunta.controller');
 
 const router = Router();
 
@@ -12,5 +12,8 @@ router.route('/:id')
         .get(getPreguntaById)
         .put(updatePregunta)
         .delete(deletePregunta)
+
+router.route('/m/:modulo')
+        .get(getPreguntaByModulo)
 
 module.exports = router;

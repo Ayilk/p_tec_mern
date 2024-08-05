@@ -16,18 +16,25 @@ pregunta.getPreguntaById = (req, res) => {
         .catch(err => res.status(500).json({msg: "Hubo un error al encontrar la pregunta", err}));
 }
 
+pregunta.getPreguntaByModulo = (req, res) => {
+    const modulo = req.params.modulo;
+    Pregunta.find({modulo: modulo})
+        .then(preguntas => res.json(preguntas))
+        .catch(err => res.status(500).json({msg: "Hubo un error al encontrar las pregunta por módulo", err}));
+}
+
 pregunta.createPregunta = (req, res) => {
-    const {numero, pregunta, respuesta, imagen} = req.body;
-    const newPregunta = new Pregunta({numero: numero, pregunta: pregunta, respuesta: respuesta, imagen: imagen});
+    const {modulo, numero, pregunta, respuesta, imagen} = req.body;
+    const newPregunta = new Pregunta({modulo: modulo, numero: numero, pregunta: pregunta, respuesta: respuesta, imagen: imagen});
     newPregunta.save()
         .then(response => res.json({msg: "Pregunta creada", success: true}))
         .catch(err => res.status(500).json({msg: "Hubo un error al crear la pregunta",err}));
 }
 
 pregunta.updatePregunta = (req, res) => {
-    const {numero, pregunta, respuesta, imagen} = req.body;
+    const {modulo, numero, pregunta, respuesta, imagen} = req.body;
     const _id = req.params.id;
-    Pregunta.findByIdAndUpdate(_id, {numero, pregunta, respuesta, imagen})
+    Pregunta.findByIdAndUpdate(_id, {modulo: modulo, numero, pregunta, respuesta, imagen})
         .then(response => res.json({msg: "Pregunta actualizada", success: true}))
         .catch(err => res.status(500).json({msg: "Hubo un error al actualizar la pregunta",err}));        
 }

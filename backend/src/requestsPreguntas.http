@@ -4,6 +4,10 @@ GET http://localhost:8000/api/preguntas
 ### Encontrando módulo por id
 GET http://localhost:8000/api/preguntas/66b05fc3f60e69fa6f8f74e2
 
+### Encontrando módulo por modulo
+GET http://localhost:8000/api/preguntas/m/1
+
+
 ### Creando un nuevo módulo
 POST http://localhost:8000/api/preguntas
 Content-Type: application/json

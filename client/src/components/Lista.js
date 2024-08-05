@@ -32,7 +32,7 @@ const Lista = () => {
                     <div className='card'>
 
                         <div className='card-header'>
-                            <h5>Número: {e.id}</h5>
+                            <h5>Módulo {e.id}</h5>
                         </div>
 
                         <div className='card-body'>
@@ -40,14 +40,17 @@ const Lista = () => {
                         </div>
 
                         <div className='card-footer '>
-                            <button className='btn btn-danger'
-                                    onClick={()=> {eliminarModulo(e._id)}}>
-                                Eliminar
-                            </button>
+                            <Link className='btn btn-primary m-1' to={'/PreguntasByModulo/' + e.id}>
+                                Ver
+                            </Link>
                             {/* Nos redireccionará al formulario con los datos que ya tiene guardados */}
                             <Link className='btn btn-primary m-1' to={'/EditarModulo/' + e._id}>
                                 Editar
                             </Link>
+                            <button className='btn btn-danger'
+                                    onClick={()=> {eliminarModulo(e._id)}}>
+                                Eliminar
+                            </button>
                         </div>
 
                     </div>
