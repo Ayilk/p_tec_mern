@@ -10,10 +10,18 @@
 
 ### Se trata de un cuestionario dividido en 5 módulos, en dónde tanto los módulos como las preguntas cuentan con un CRUD.
 
-* Para levantar el backend se requiere ejecutar el comando ` npm i` en `backend.`
+* Para levantar el backend se requiere ejecutar el comando ` npm i` en `backend` y luego `npm run dev`
 * Crear el archivo `.env` y colocar las claves para el puerto y la conexión con mongo:
 
-...
+```
 PORT=8000
 MONGODB_URI=mongodb+srv://usuario:contraseña@mern.n2bu6vj.mongodb.net/?retryWrites=true&w=majority&appName=mern
-...
+```
+
+Los ENDPOINTS para los dos modelos están en backend  > srs en los archivos :
+
+> 1.- requestModulo.htttp 
+>
+>2.- requestsPreguntas.http
+
+* Para levantar el frontend ejecutar el comando ` npm start`.
