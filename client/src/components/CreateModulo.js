@@ -35,7 +35,6 @@ const CreateModulo = () => {
         await axios.post('http://localhost:8000/api/modulo/', newModulo)
 
 
-        console.log(modulo);
         //Para reestablecer el formulario en sus valores inciales
         setModulo({...valorInicial});
     }

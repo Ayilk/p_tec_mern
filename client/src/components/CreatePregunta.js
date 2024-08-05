@@ -44,7 +44,7 @@ const CreatePregunta = () => {
       numero: pregunta.numero,
       pregunta: pregunta.pregunta,
       respuesta: pregunta.respuesta,
-      imagen: pregunta.respuesta   
+      imagen: pregunta.imagen   
     }
     await axios.put('http://localhost:8000/api/preguntas/' + subId, newPregunta);
     setPregunta({...valorInicial});
