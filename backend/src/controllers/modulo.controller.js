@@ -37,7 +37,7 @@ modulo.updateModulo = (req, res) => {
 
 modulo.deleteModulo = (req, res) => {
     const _id = req.params.id;
-    Modulo.deleteOne(_id)
+    Modulo.deleteOne({_id: _id})
         .then(response => res.json({msg: "Módulo eliminado", success: true}))
         .catch(err => res.status(500).json({msg: "Hubo un error al eliminar el módulo", err}));        
 }

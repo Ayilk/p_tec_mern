@@ -1,6 +1,8 @@
 
 const express = require('express');
 const cors = require('cors');
+const routesModulo = require('./routes/modulo');
+const routesPreguntas = require('./routes/preguntas');
 
 const app = express();
 
@@ -19,8 +21,11 @@ app.use(express.json());
 
 // -----------------Rutas
 
-app.get('/', (res, resp) => {
+app.get('/', (req, res) => {
     res.send('Api en acción');
 })
+
+app.use('/api/modulo', routesModulo);
+app.use('/api/preguntas', routesPreguntas);
 
 module.exports = app;

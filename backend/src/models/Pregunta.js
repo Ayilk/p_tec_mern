@@ -1,10 +1,9 @@
 
 
 
-const { Schema, model } = require('mongoose');
+const { Schema, model, mongoose } = require('mongoose');
 
 const preguntaSchema = new Schema({
-    id: ObjectId,
     numero: Number,
     pregunta: String,
     respuesta: String,
