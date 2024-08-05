@@ -1,0 +1,26 @@
+
+### Encontrando todos los módulos
+GET http://localhost:8000/api/modulo
+
+### Encontrando módulo por id
+GET http://localhost:8000/api/modulo/66b05ab56afd3c36c93a9540
+
+### Creando un nuevo módulo
+POST http://localhost:8000/api/modulo
+Content-Type: application/json
+
+{
+    "id": 1,
+    "nombre": "JavaScript"
+}
+
+### Actualizando un módulo
+PUT http://localhost:8000/api/modulo/66b05ab56afd3c36c93a9540
+Content-Type: application/json
+
+{
+    "nombre": "Javascript"
+}
+
+### Eliminando un módulo
+DELETE http://localhost:8000/api/modulo/66b05ab56afd3c36c93a9540

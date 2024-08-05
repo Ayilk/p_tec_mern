@@ -1,0 +1,25 @@
+### Encontrando todos los módulos
+GET http://localhost:8000/api/preguntas
+
+### Encontrando módulo por id
+GET http://localhost:8000/api/preguntas/66b05fc3f60e69fa6f8f74e2
+
+### Creando un nuevo módulo
+POST http://localhost:8000/api/preguntas
+Content-Type: application/json
+
+{
+    "numero": 1,
+    "pregunta": "Explica la diferencia entre var, let, y const en JavaScript. ¿Cuál es el alcance de cada uno?",
+    "Respuesta": "Var define una variable global, es decir, su scope es el objeto global this o window.",       
+    "imagen": "https://www.ohyoufrancyblog.com/static/9557df57adba22264125fcd777fdd539/ead9f/var-let-const.png"
+}
+### Actualizando un módulo
+PUT http://localhost:8000/api/preguntas/66b05fc3f60e69fa6f8f74e2
+Content-Type: application/json
+
+{
+    "imagen": ""
+}
+### Eliminando un módulo
+DELETE http://localhost:8000/api/preguntas/66b05fc3f60e69fa6f8f74e2
